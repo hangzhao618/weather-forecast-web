@@ -1,10 +1,179 @@
 .App {
   text-align: center;
+  background-color: hsl(194, 81%, 94%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  /* min-width: 70%; */
+  max-width: 1000px;
+  background-color: white;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 20px 20px 40px 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgb(193, 235, 248);
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  /* background-color: #61dafb; */
+}
+
+.left {
+  min-width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  /* background-color: yellowgreen; */
+}
+
+.location {
+  /* width: 30%; */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  /* box-sizing: border-box; */
+  margin: 20px 0;
+}
+.location label {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: 2px solid lightgray;
+  font-size: 15px;
+}
+
+.weater-container {
+  /* height: 500px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-time,
+.humidity-wind .title {
+  color: gray;
+}
+
+.current-weater {
+  display: flex;
+  font-size: 2em;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.forecast-icon {
+  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temperature {
+  padding-right: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+.degree-symbol {
+  position: absolute;
+  top: -5px; /* 根据需要调整位置 */
+  right: 11px; /* 根据需要调整位置 */
+  font-size: 16px; /* 调整符号的字体大小 */
+}
+.current-condition {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.humidity-wind {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  text-align: center;
+}
+.humidity-wind .title {
+  padding-bottom: 10px;
+}
+
+.right {
+  flex-grow: 1;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: end;
+  box-sizing: border-box;
+}
+
+.chat {
+  margin-bottom: 20px;
+}
+
+.title {
+  /* font-size: 1.5em; */
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  height: 100px; /* 设置固定高度 */
+  width: 100%;
+  position: relative; /* 相对定位以确保图表正确渲染 */
+}
+
+.weekly {
+  display: flex;
+}
+
+.day-weather {
+  width: 25%;
+  padding: 20px;
+  margin-bottom: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  cursor: pointer;
+  color: gray;
+}
+
+.day-weather .icon {
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+.day-weather.selected {
+  background-color: #53a0f1;
+  color: white;
+  border-radius: 5px;
+
+  .title {
+    color: rgb(102, 99, 99);
+  }
+}
+.day {
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
